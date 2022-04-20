@@ -2,9 +2,9 @@
 
 namespace Generator3.Converter
 {
-    public static partial class ReturnTypeConverter
+    public static class ReturnTypeConverter
     {
-        public static string ToNative(this ReturnType from, string fromVariableName)
+        public static string ToNative(this GirModel.ReturnType from, string fromVariableName)
         {
             if (from.AnyType.Is<Pointer>())
                 return fromVariableName;
